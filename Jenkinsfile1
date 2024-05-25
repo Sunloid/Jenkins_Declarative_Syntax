@@ -1,0 +1,25 @@
+pipeline {
+    agent any 
+
+    stages {
+
+        stage("build") {
+            steps {
+                echo "Writing my first declarative syntax"
+            }
+        }
+        
+        stage("test") {
+            steps {
+                echo "Testing the syntax"
+            }
+        }
+
+        stage("deploy") {
+            steps {
+                echo "Deploying the syntax"
+            }
+        }
+
+    }
+}
