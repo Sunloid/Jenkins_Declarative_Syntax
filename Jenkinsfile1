@@ -22,4 +22,13 @@ pipeline {
         }
 
     }
+    always{
+        echo "Code has been used"
+    }
+    failure{
+        echo "Code has failed"
+    }
+    success{
+        echo "Code was successfull"
+    }
 }
