@@ -1,6 +1,9 @@
 import groovy.transform.Field
 pipeline {
     agent any 
+    environment {
+        NEW_VERSION = "12345"
+    }
 
     stages {
 
@@ -17,6 +20,7 @@ pipeline {
                 echo "${env.JOB_DISPLAY_URL}"
                 echo "${env.BUILD_NUMBER}"
                 echo "${env.GIT_AUTHOR_NAME}"
+                echo "${env.NEW_VERSION}"
             }
         }
 
