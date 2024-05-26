@@ -15,6 +15,7 @@ pipeline {
             steps {
                 echo "Testing the syntax"
                 echo "${env.JOB_DISPLAY_URL}"
+                echo "${env.BUILD_NUMBER}"
             }
         }
 
