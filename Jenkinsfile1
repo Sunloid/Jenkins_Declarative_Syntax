@@ -12,7 +12,7 @@ pipeline {
         stage("test") {
             when {
                 expression {
-                    BRANCH_NAME == "default"
+                    BRANCH_NAME == "main"
                 }
             }
             steps {
