@@ -20,6 +20,7 @@ pipeline {
                 echo "${env.JOB_DISPLAY_URL}"
                 echo "${env.BUILD_NUMBER}"
                 echo "${env.NEW_VERSION}"
+                
             }
         }
 
