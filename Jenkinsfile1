@@ -10,13 +10,10 @@ pipeline {
         }
         
         stage("test") {
-            when {
-                expression {
-                    ${env.BRANCH_NAME} == "main"
-                }
             }
             steps {
                 echo "Testing the syntax"
+                echo "$env.BRANCH_NAME"
             }
         }
 
