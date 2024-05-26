@@ -10,7 +10,7 @@ pipeline {
         }
         
         stage("test") {
-            }
+            
             steps {
                 echo "Testing the syntax"
                 echo "$env.BRANCH_NAME"
