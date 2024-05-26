@@ -16,6 +16,7 @@ pipeline {
                 echo "Testing the syntax"
                 echo "${env.JOB_DISPLAY_URL}"
                 echo "${env.BUILD_NUMBER}"
+                echo "${env.GIT_AUTHOR_NAME}"
             }
         }
 
