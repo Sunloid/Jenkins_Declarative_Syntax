@@ -13,7 +13,7 @@ pipeline {
             
             steps {
                 echo "Testing the syntax"
-                echo "$env.BRANCH_NAME"
+                echo "${env.BRANCH_NAME}"
             }
         }
 
