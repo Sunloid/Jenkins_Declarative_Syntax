@@ -14,7 +14,7 @@ pipeline {
             
             steps {
                 echo "Testing the syntax"
-                echo "${env.BRANCH_NAME}"
+                echo "${env.JOB_NAME}"
             }
         }
 
