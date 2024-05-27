@@ -5,7 +5,7 @@ pipeline {
         NEW_VERSION = "12345"
     }
     tools {
-        maven 'Maven'
+        maven 'Maven 3.9.7'
     }
 
     stages {
