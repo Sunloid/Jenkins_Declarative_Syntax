@@ -3,13 +3,13 @@ pipeline {
     stages{
 
         stage("init") {
-            step{
+            steps{
                 gv = "script.groovy"
             }
         }
         
         stage("build") {
-            step{
+            steps{
                 script{
                     gv.buildApp()
                 }  
@@ -17,7 +17,7 @@ pipeline {
         }
 
         stage("test") {
-            step{
+            steps{
                 script{
                     gv.testApp()
                 }
@@ -25,7 +25,7 @@ pipeline {
         }
 
         stage("deploy") {
-            step{
+            steps{
                 script{
                     gv.deployApp()
                 }
