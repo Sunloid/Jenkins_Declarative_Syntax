@@ -4,12 +4,16 @@ pipeline {
     environment {
         NEW_VERSION = "12345"
     }
+    tools {
+        maven 'Maven'
+    }
 
     stages {
 
         stage("build") {
             steps {
-                echo "Writing my first declarative syntax"
+                echo "Installing maven for the project build"
+                sh "mvn install"
             }
         }
         
