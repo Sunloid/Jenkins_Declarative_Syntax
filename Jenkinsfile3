@@ -1,0 +1,28 @@
+piepline {
+    agent any 
+    stages{
+
+        stage("init") {
+            gv = "script.groovy"
+        }
+        
+        stage("build") {
+            script{
+                gv.buildApp()
+            }
+        }
+
+        stage("test") {
+            script{
+                gv.testApp()
+            }
+        }
+
+        stage("deploy") {
+            script{
+                gv.deployApp()
+            }
+        }
+        
+    }
+}
