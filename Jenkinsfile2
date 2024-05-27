@@ -1,0 +1,44 @@
+pipeline {
+    agent any 
+    parameters {
+        choice(name:"version", choices: ['Yes', 'No', 'Maybe'], description: 'What will be the answer')
+        booleanParam(name:"ExecuteTests", defaultValue: true, description: 'Do it then you dickhead')
+    }
+    stages {
+        stages {
+        stage("build") {
+            steps {
+                echo "Building the syntax"
+            }
+        }
+        
+        stage("test") {
+            when {
+                expression {
+                    params.ExecuteTests == true
+                }
+            }
+            steps {
+                echo "Testing the syntax"
+            }
+        }
+
+        stage("deploy") {
+            steps {
+                echo "Deploying the syntax"
+            }
+        }
+
+    }
+    post{
+    failure{
+        echo "Code has failed"
+        }
+    success{
+        echo "Code was successfull"
+        }
+    }
+    
+
+    }
+}
