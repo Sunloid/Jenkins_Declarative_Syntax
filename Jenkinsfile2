@@ -1,13 +1,14 @@
 pipeline {
     agent any 
     parameters {
-        choice(name:"version", choices: ['Yes', 'No', 'Maybe'], description: 'What will be the answer')
+        choice(name:"version", choices: ['1.1', '1.2', 'Beta'], description: 'What will be the answer')
         booleanParam(name:"ExecuteTests", defaultValue: true, description: 'Do it then you dickhead')
     }
     stages {
         stage("build") {
             steps {
                 echo "Building the syntax"
+                echo "Deploying version ${params.version}"
             }
         }
         
