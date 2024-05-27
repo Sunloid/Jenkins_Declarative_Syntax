@@ -5,7 +5,6 @@ pipeline {
         booleanParam(name:"ExecuteTests", defaultValue: true, description: 'Do it then you dickhead')
     }
     stages {
-        stages {
         stage("build") {
             steps {
                 echo "Building the syntax"
@@ -37,8 +36,5 @@ pipeline {
     success{
         echo "Code was successfull"
         }
-    }
-    
-
     }
 }
